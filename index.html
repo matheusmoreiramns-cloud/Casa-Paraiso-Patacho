@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa de Praia Rústica - Reserva</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background: #f5eee6 url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') no-repeat center top fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        .overlay {
+            background: rgba(245, 238, 230, 0.92);
+            min-height: 100vh;
+            padding-bottom: 40px;
+        }
+        header {
+            background: #8d6748;
+            color: #fff;
+            padding: 40px 0 20px 0;
+            text-align: center;
+            border-bottom: 6px solid #c2a477;
+            letter-spacing: 2px;
+        }
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 2.8em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        main {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff8f0;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(141, 103, 72, 0.13);
+            padding: 32px 24px;
+            border: 2px solid #c2a477;
+        }
+        h2 {
+            color: #8d6748;
+            margin-bottom: 18px;
+            font-family: 'Georgia', serif;
+        }
+        .desc {
+            font-size: 1.1em;
+            color: #5c4327;
+            margin-bottom: 24px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        label {
+            font-weight: bold;
+            color: #8d6748;
+        }
+        input, select, textarea {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #c2a477;
+            font-size: 1em;
+            background: #f5eee6;
+            font-family: inherit;
+        }
+        button {
+            background: #8d6748;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-family: 'Georgia', serif;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #a07c54;
+        }
+        .success {
+            color: #3c763d;
+            background: #dff0d8;
+            border: 1px solid #c2a477;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 18px;
+            text-align: center;
+        }
+        footer {
+            background: #8d6748;
+            color: #fff;
+            text-align: center;
+            padding: 18px 0 10px 0;
+            border-top: 6px solid #c2a477;
+            margin-top: 40px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .galeria-item {
+            background: #fff8f0;
+            border: 1px solid #c2a477;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(141, 103, 72, 0.07);
+            width: 260px;
+            padding: 10px 10px 18px 10px;
+            text-align: center;
+        }
+        .galeria-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        .galeria-item h3 {
+            color: #8d6748;
+            margin: 8px 0 4px 0;
+            font-size: 1.1em;
+        }
+        .galeria-item p {
+            color: #5c4327;
+            font-size: 0.98em;
+            margin: 0;
+        }
+        @media (max-width: 700px) {
+            main {
+                margin: 20px 6px;
+                padding: 18px 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <header>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 18px;">
+                <img src="c:\Users\Matheus\OneDrive\Área de Trabalho\FOTOS CASA DE PRAIA\IMG_8611-removebg-preview.png" alt="Logo Casa Paraiso do Patacho" style="height: 70px; width: auto; display: block; margin: 0;">
+                <h1 style="margin: 0; display: flex; align-items: center; height: 70px;">Casa de Praia Paraiso do Patacho</h1>
+            </div>
+            <p style="margin-top: 10px;">Reserve seu refúgio à beira-mar com conforto e simplicidade</p>
+        </header>
+        <main>
+            <!-- NOVA SEÇÃO: Galeria e descrição dos cômodos -->
+            <section class="galeria">
+                <div class="galeria-item">
+                    <img src="c:\Users\Matheus\OneDrive\Área de Trabalho\FOTOS CASA DE PRAIA\IMG_4798.JPG" alt="Quarto">
+                    <h3>Quarto</h3>
+                    <p>Amplo, com três camas de solteiro, ar-condicionado, armário e vista para o mar.</p>
+                </div>
+                <div class="galeria-item">
+                    <img src="c:\Users\Matheus\OneDrive\Área de Trabalho\FOTOS CASA DE PRAIA\IMG_4015.jpg" alt="Casa Paraiso Patacho">
+                    <h3>Casa Paraiso Patacho</h3>
+                    <p>Uma casa perfeita para passar os dias com a sua família.</p>
+                </div>
+                <div class="galeria-item">
+                    <img src="c:\Users\Matheus\OneDrive\Área de Trabalho\FOTOS CASA DE PRAIA\IMG_4800.JPG" alt="Cozinha">
+                    <h3>Cozinha</h3>
+                    <p>Completa, equipada com geladeira, fogão, micro-ondas, utensílios e mesa rústica.</p>
+                </div>
+                <div class="galeria-item">
+                    <img src="c:\Users\Matheus\OneDrive\Área de Trabalho\FOTOS CASA DE PRAIA\289036900-MOB.jpg" alt="Praia">
+                    <h3>Praia</h3>
+                    <p>Linda praia com areia branca, águas cristalinas e coqueiros.</p>
+                </div>
+                <div class="galeria-item">
+                    <img src="c:\Users\Matheus\OneDrive\Área de Trabalho\FOTOS CASA DE PRAIA\IMG_4797.JPG" alt="Piscina">
+                    <h3>Piscina</h3>
+                    <p>Área externa com piscina, espreguiçadeiras e churrasqueira.</p>
+                </div>
+                <div class="galeria-item">
+                    <img src="c:\Users\Matheus\OneDrive\Área de Trabalho\FOTOS CASA DE PRAIA\IMG_4799.JPG" alt="Segundo andar">
+                    <h3>Segundo andar</h3>
+                    <p>Segundo andar da casa com área de descanso e espaço aconchegante</p>
+                </div>
+            </section>
+            <!-- Informações da casa -->
+            <section style="margin-bottom: 30px; text-align: center;">
+                <h2 style="color: #8d6748; font-family: 'Georgia', serif; margin-bottom: 10px;">Informações da Casa</h2>
+                <p style="color: #5c4327; font-size: 1.08em;">
+                    Casa por temporada com 4 suítes na Praia do Patacho, em Porto de Pedras - AL.<br>
+                    Consulte valor da diária por Whatsapp.
+                </p>
+            </section>
+            <h2>Faça sua Reserva</h2>
+            <div class="desc">
+                Casa aconchegante, com varanda, rede, vista para o mar, acesso fácil à praia e ambiente perfeito para relaxar com a família ou amigos.
+            </div>
+            <form id="reservaForm" onsubmit="return enviarParaWhatsapp(event)">
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="dataEntrada">Data de entrada:</label>
+                <input type="date" id="dataEntrada" name="dataEntrada" required>
+
+                <label for="dataSaida">Data de saída:</label>
+                <input type="date" id="dataSaida" name="dataSaida" required>
+
+                <label for="pessoas">Número de pessoas:</label>
+                <select id="pessoas" name="pessoas" required>
+                    <option value="">Selecione</option>
+                    <option value="1">1 pessoa</option>
+                    <option value="2">2 pessoas</option>
+                    <option value="3">3 pessoas</option>
+                    <option value="4">4 pessoas</option>
+                    <option value="5">5 pessoas</option>
+                    <option value="6">6 pessoas</option>
+                    <option value="7">7 pessoas</option>
+                    <option value="8">8 pessoas</option>
+                    <option value="9">9 pessoas</option>
+                    <option value="10">10 pessoas</option>
+                </select>
+
+                <label for="mensagem">Mensagem (opcional):</label>
+                <textarea id="mensagem" name="mensagem" rows="3" placeholder="Alguma observação especial?"></textarea>
+
+                <span style="display:block; text-align:center; margin:38px 0 8px 0; color:#5c4327; font-size:1.08em; font-family:'Georgia',serif;">
+                    Aperte aqui para concluir sua reserva!
+                </span>
+                <button type="submit" id="btnWhatsapp" style="
+                    background: #25d366;
+                    color: #fff;
+                    font-size: 1.2em;
+                    font-family: 'Georgia', serif;
+                    font-weight: bold;
+                    padding: 14px 32px;
+                    border-radius: 32px;
+                    text-decoration: none;
+                    box-shadow: 0 2px 8px rgba(37,211,102,0.12);
+                    transition: background 0.2s;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                ">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="height: 24px; vertical-align: middle;">
+                    Reservar Agora pelo WhatsApp
+                </button>
+            </form>
+            <div id="respostaReserva"></div>
+            <!-- Seção de contato via WhatsApp -->
+            <section style="margin-top: 36px; text-align: center;">
+                <h2 style="color: #25d366; font-family: 'Georgia', serif; margin-bottom: 10px;">Dúvidas ou quer fechar sua diária?</h2>
+                <p style="color: #5c4327; margin-bottom: 18px;">
+                    Fale diretamente conosco pelo WhatsApp para tirar dúvidas ou finalizar sua reserva:
+                </p>
+                <a href="https://wa.me/55082993579500" target="_blank" style="
+                    display: inline-block;
+                    background: #25d366;
+                    color: #fff;
+                    font-size: 1.2em;
+                    font-family: 'Georgia', serif;
+                    font-weight: bold;
+                    padding: 14px 32px;
+                    border-radius: 32px;
+                    text-decoration: none;
+                    box-shadow: 0 2px 8px rgba(37,211,102,0.12);
+                    transition: background 0.2s;
+                ">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="height: 24px; vertical-align: middle; margin-right: 10px;">
+                    Falar no WhatsApp
+                </a>
+            </section>
+        </main>
+        <footer>
+            &copy; 2025 Casa de Praia Paraiso do Patacho. Todos os direitos reservados.
+        </footer>
+    </div>
+    <script>
+        function enviarParaWhatsapp(event) {
+            event.preventDefault();
+            // Pega os valores do formulário
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const dataEntrada = document.getElementById('dataEntrada').value;
+            const dataSaida = document.getElementById('dataSaida').value;
+            const pessoas = document.getElementById('pessoas').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            // Função para formatar data para dd-mm-aaaa
+            function formatarDataBR(dataISO) {
+                if (!dataISO) return '';
+                const partes = dataISO.split('-');
+                if (partes.length !== 3) return dataISO;
+                return `${partes[2].padStart(2, '0')}-${partes[1].padStart(2, '0')}-${partes[0]}`;
+            }
+
+            // Monta a mensagem sem *, \n ou /
+            let texto = "Olá! Gostaria de fazer uma reserva:\n";
+            texto += "Nome: " + nome + "\n";
+            texto += "E-mail: " + email + "\n";
+            texto += "Data de entrada: " + formatarDataBR(dataEntrada) + "\n";
+            texto += "Data de saída: " + formatarDataBR(dataSaida) + "\n";
+            texto += "Número de pessoas: " + pessoas + "\n";
+            if (mensagem.trim() !== "") {
+                texto += "Mensagem: " + mensagem + "\n";
+            }
+
+            // Codifica e abre o WhatsApp
+            const url = `https://wa.me/55082991033531?text=${encodeURIComponent(texto)}`;
+            window.open(url, '_blank');
+            return false;
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>
